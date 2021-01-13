@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 **Demo** of the application can be found [here](https://vfarah-if.github.io/corn-calculator/)
 
-Authenticated client **URL** for the client can be found at [https://corncalculator.azurewebsites.net](https://meet.google.com/linkredirect?authuser=0&dest=https%3A%2F%2Fcorncalculator.azurewebsites.net%2F) using the email to with **email** FarmerMoon@fbquinterosgmail.onmicrosoft.com  **password** *Ruku4533*
+Authenticated client **URL** for the client can be found at [https://corncalculator.azurewebsites.net](https://meet.google.com/linkredirect?authuser=0&dest=https%3A%2F%2Fcorncalculator.azurewebsites.net%2F) using the email to with **email** farmermoon@fbquinterosgmail.onmicrosoft.com  **password** *Ruku4533*
 
 ## Available Scripts
 
