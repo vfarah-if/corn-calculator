@@ -4,13 +4,14 @@ import "./App.css";
 
 function App() {
   const [quantity, setQuantity] = useState(1);
-  const [costPerBag, setCostPerBag] = useState(0.25);
+  const costPerBag = 0.25;
   const onQuantityChange = (e) => {
-    console.log("Test", e.target.value);
+    console.log("Quanity of", e.target.value);
     setQuantity(e.target.value);
   };
 
   return (
+
     <div className="App">
       <header className="App-header">
         <h1>Corn calculator</h1>
