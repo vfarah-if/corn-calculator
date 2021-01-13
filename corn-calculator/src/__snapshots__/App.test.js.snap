@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`APP should get default app in the expected html format 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <header
+      class="App-header"
+    >
+      <h1>
+        Corn calculator
+      </h1>
+      <label
+        forhtml="quantity"
+      >
+        Quantity:
+      </label>
+      <input
+        name="quantity"
+        type="number"
+        value="1"
+      />
+      <label>
+        £ 
+        0.25
+      </label>
+    </header>
+  </div>
+</div>
+`;
