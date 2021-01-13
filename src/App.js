@@ -15,11 +15,19 @@ function App() {
   return (
     <div className="App">
       {/* TODO: Extract Header Component */}
-      <header className="App-header">
+      <header
+        className="App-header"
+        style={{
+          backgroundImage: `url("https://images.pexels.com/photos/34153/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350")`,
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
         <h1>River trip adviser</h1>
       </header>
       <div className="App-content">
-        {/* TODO: Extract Trip Calculator Component */}        
+        {/* TODO: Extract Trip Calculator Component */}
         <label forhtml="cornQuantity">Corn Quantity:</label>
         <input
           type="number"
@@ -28,7 +36,7 @@ function App() {
           value={cornQuantity}
           onChange={cornQuantityHandler}
         />
-        <br/>
+        <br />
         <label>£ {parseFloat(cornQuantity * costPerBag).toFixed(2)}</label>
       </div>
     </div>
