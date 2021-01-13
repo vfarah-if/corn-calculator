@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`APP should get default app in the expected html format 1`] = `
+exports[`App should get default app in the expected html format 1`] = `
 <div>
   <div
     class="App"

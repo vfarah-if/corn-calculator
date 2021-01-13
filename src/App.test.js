@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import App from './App';
 
-describe('APP', () => {
+describe('App', () => {
   test('should contain a header with corn calculator', () => {
     render(<App />);
     const linkElement = screen.getByText(/Corn calculator/i);
