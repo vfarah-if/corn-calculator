@@ -16,6 +16,7 @@
     ☐ if you have both items and more than one of either then don't make the trip
     ☐ They will probably add another layer after this which puts geese at risk if I'm guessing where this is going. 
 ☐ Nice to haves if there is time
-   ☐ Extract components into components folder moving logic out of the App infrastructure
-   ☐ Break components up within components to extract and simplify logic
-   ☐ Style the application better so it looks and feels more presentable/professional
+    ☐ Use the https://material-ui.com/getting-started/installation/ to update components and theme
+    ☐ Extract components into components folder moving logic out of the App infrastructure
+    ☐ Break components up within components to extract and simplify logic
+    ☐ Style the application better so it looks and feels more presentable/professional
