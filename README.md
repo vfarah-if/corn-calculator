@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+**Demo** of the application can be found [here](https://vfarah-if.github.io/corn-calculator/)
+
 ## Available Scripts
 
 In the project directory, you can run:
