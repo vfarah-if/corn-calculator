@@ -7,6 +7,7 @@ exports[`App should get default app in the expected html format 1`] = `
   >
     <header
       class="App-header"
+      style="background-image: url(/farm.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;"
     >
       <h1>
         River trip adviser

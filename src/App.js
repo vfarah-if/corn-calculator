@@ -18,7 +18,7 @@ function App() {
       <header
         className="App-header"
         style={{
-          backgroundImage: `url("https://images.pexels.com/photos/34153/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350")`,
+          backgroundImage: `url(${process.env.PUBLIC_URL + '/farm.jpg'})`,
           backgroundPosition: "center",
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
