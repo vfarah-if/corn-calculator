@@ -4,7 +4,8 @@
 ✔ Deployed to Git @done(21-01-13 16:54)
 ✔ Deployed to Azure @done(21-01-13 16:54)
 ☐ New client changes that need to be developed        
-    ☐ Refactor existing code to work as corn and simplify the existing tests    
+    ✔ Refactor existing code to work as corn and simplify the existing tests @done(21-01-13 20:32)
+    ☐ Prevent values below zero from being entered
     ☐ 0 goose, 0 corn : cost £0.25 : no cargo to take
     ☐ 1 goose, 0 corn : cost £0.25 : take in this order : goose
     ☐ 0 goose, 1 corn : cost £0.25 : take in this order : corn

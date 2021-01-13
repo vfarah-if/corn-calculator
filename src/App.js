@@ -3,27 +3,34 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [quantity, setQuantity] = useState(1);
+  const [cornQuantity, setCornQuantity] = useState(1);
   const costPerBag = 0.25;
-  const onQuantityChange = (e) => {
-    console.log("Quanity of", e.target.value);
-    setQuantity(e.target.value);
+
+  const cornQuantityHandler = (e) => {
+    const value = Number.parseInt(e.target.value, 10) || 0;
+    console.log("Quantity of corn", value);
+    setCornQuantity(value);
   };
 
   return (
-
     <div className="App">
+      {/* TODO: Extract Header Component */}
       <header className="App-header">
-        <h1>Corn calculator</h1>
-        <label forhtml="quantity">Quantity:</label>
+        <h1>River trip adviser</h1>
+      </header>
+      <div className="App-content">
+        {/* TODO: Extract Trip Calculator Component */}        
+        <label forhtml="cornQuantity">Corn Quantity:</label>
         <input
           type="number"
+          id="cornQuantity"
           name="quantity"
-          value={quantity}
-          onChange={onQuantityChange}
-        ></input>
-        <label>£ {quantity * costPerBag}</label>
-      </header>
+          value={cornQuantity}
+          onChange={cornQuantityHandler}
+        />
+        <br/>
+        <label>£ {parseFloat(cornQuantity * costPerBag).toFixed(2)}</label>
+      </div>
     </div>
   );
 }

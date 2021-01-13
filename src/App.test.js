@@ -3,22 +3,22 @@ import { render, screen } from '@testing-library/react';
 import App from './App';
 
 describe('App', () => {
-  test('should contain a header with corn calculator', () => {
+  test('should contain a header with river trip adviser', () => {
     render(<App />);
-    const linkElement = screen.getByText(/Corn calculator/i);
+    const linkElement = screen.getByText(/River trip adviser/i);
     expect(linkElement).toBeInTheDocument();
   });
 
-  test('should contain a quantity label', () => {
+  test('should contain a corn quantity label', () => {
     render(<App />);
-    const linkElement = screen.getByText(/Quantity/i);
+    const linkElement = screen.getByText(/Corn Quantity:/i);
     expect(linkElement).toBeInTheDocument();
   });
 
   test('should contain a quantity with initial default value of 1', () => {
     const component = render(<App />);
     
-    const inputElement = component.container.querySelector('input');
+    const inputElement = component.container.querySelector('#cornQuantity');
 
     expect(inputElement).toBeTruthy();
     expect(inputElement.value).toBe("1");

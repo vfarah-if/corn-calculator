@@ -9,23 +9,29 @@ exports[`App should get default app in the expected html format 1`] = `
       class="App-header"
     >
       <h1>
-        Corn calculator
+        River trip adviser
       </h1>
+    </header>
+    <div
+      class="App-content"
+    >
       <label
-        forhtml="quantity"
+        forhtml="cornQuantity"
       >
-        Quantity:
+        Corn Quantity:
       </label>
       <input
+        id="cornQuantity"
         name="quantity"
         type="number"
         value="1"
       />
+      <br />
       <label>
         £ 
         0.25
       </label>
-    </header>
+    </div>
   </div>
 </div>
 `;
