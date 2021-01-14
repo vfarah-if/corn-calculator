@@ -6,19 +6,17 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
   const [cornQuantity, setCornQuantity] = useState(initialCornQuantity || 0);
   const [geeseQuantity, setGeeseQuantity] = useState(initialGeeseQuantity || 0);
   const [message, setMessage] = useState("No cargo to take");
-  const costPerBag = 0.25;
+  const costPerTrip = 0.25;
 
   useEffect(() => {
-
     if (cornQuantity === 0 && geeseQuantity === 0) {
       return setMessage(`No cargo to take`);
     }
 
-    if (cornQuantity > 1 && geeseQuantity > 0) {
-      return setMessage(`Do not make trip, corn is at risk`);
-    }
-
-    if (cornQuantity > 0 && geeseQuantity > 1) {
+    if (
+      (cornQuantity > 1 && geeseQuantity > 0) ||
+      (cornQuantity > 0 && geeseQuantity > 1)
+    ) {
       return setMessage(`Do not make trip, corn is at risk`);
     }
 
@@ -40,24 +38,23 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
   }, [cornQuantity, geeseQuantity, initialGeeseQuantity, initialCornQuantity]);
 
   const calculateCostOfTrip = () => {
-    if (cornQuantity > 1 && geeseQuantity > 0) {
-      return parseFloat(0).toFixed(2);
-    }
-
-    if (cornQuantity > 0 && geeseQuantity > 1) {
+    if (
+      (cornQuantity > 1 && geeseQuantity > 0) ||
+      (cornQuantity > 0 && geeseQuantity > 1)
+    ) {
       return parseFloat(0).toFixed(2);
     }
 
     if (cornQuantity > 0) {
-      return parseFloat(cornQuantity * costPerBag).toFixed(2);
+      return parseFloat(cornQuantity * costPerTrip).toFixed(2);
     }
 
     if (geeseQuantity > 0) {
-      return parseFloat(geeseQuantity * costPerBag).toFixed(2);
+      return parseFloat(geeseQuantity * costPerTrip).toFixed(2);
     }
 
     if (cornQuantity <= 0 && geeseQuantity <= 0) {
-      return parseFloat(costPerBag).toFixed(2);
+      return parseFloat(costPerTrip).toFixed(2);
     }
   };
 
@@ -65,7 +62,7 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
   const cornQuantityHandler = (e) => {
     let value = Number.parseInt(e.target.value, 10) || 0;
     console.log("Quantity of corn", value);
-    if(value < 0) {
+    if (value < 0) {
       value = 0;
     }
     setCornQuantity(value);
@@ -75,7 +72,7 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
   const geeseQuantityHandler = (e) => {
     let value = Number.parseInt(e.target.value, 10) || 0;
     console.log("Quantity of geese", value);
-    if(value < 0) {
+    if (value < 0) {
       value = 0;
     }
     setGeeseQuantity(value);
