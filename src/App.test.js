@@ -15,22 +15,43 @@ describe('App', () => {
     expect(linkElement).toBeInTheDocument();
   });
 
-  test('should contain a quantity with initial default value of 1', () => {
+  test('should contain corn quantity with initial default value of 0', () => {
     const component = render(<App />);
     
     const inputElement = component.container.querySelector('#cornQuantity');
 
     expect(inputElement).toBeTruthy();
-    expect(inputElement.value).toBe("1");
+    expect(inputElement.value).toBe("0");
   });
 
-  test('should calculate the cost of 1 bag of corn at 25 pence', () => {
+  test('should contain geese quantity with initial default value of 0', () => {
+    const component = render(<App />);
+    
+    const inputElement = component.container.querySelector('#geeseQuantity');
+
+    expect(inputElement).toBeTruthy();
+    expect(inputElement.value).toBe("0");
+  });
+
+  test('should calculate the cost of 0 bag of corn and 0 geese @ £ 0.25', () => {
     render(<App />);
     
     const linkElement = screen.getByText(/£ 0.25/i);
     
     expect(linkElement).toBeInTheDocument();
   });
+
+  test(`should default user message to "No cargo to take"`, () => {
+    render(<App />);
+    
+    const linkElement = screen.getByText(/No cargo to take/i);
+    
+    expect(linkElement).toBeInTheDocument();
+  });
+
+  // TODO: Test where cornQuality is upped by 1 (removed for StoryBooking)
+  // TODO: Test where geeseQuantity is upped by 1 (removed for StoryBooking)
+  // TODO: Update tests covered (removed for StoryBooking)
 
   test('should get default app in the expected html format', () => {
     const component = render(<App />);
