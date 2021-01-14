@@ -6,9 +6,29 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
   const [cornQuantity, setCornQuantity] = useState(initialCornQuantity || 0);
   const [geeseQuantity, setGeeseQuantity] = useState(initialGeeseQuantity || 0);
   const [message, setMessage] = useState("No cargo to take");
+  const [tripCount, setTripCount] = useState(1);
   const costPerTrip = 0.25;
 
   useEffect(() => {
+    calculateMessage();
+  }, [cornQuantity, geeseQuantity, initialGeeseQuantity, initialCornQuantity]);
+
+  useEffect(() => {
+    if (cornQuantity === 1 && geeseQuantity === 1) {
+      return setTripCount(cornQuantity + geeseQuantity);
+    }
+
+    if (cornQuantity >= 1 && geeseQuantity >= 1) {
+      return setTripCount(0);
+    }
+
+    if (cornQuantity <= 0 && geeseQuantity <= 0) {
+      return setTripCount(1);
+    }
+    return setTripCount(Math.max(cornQuantity, 0) + Math.max(geeseQuantity, 0));
+  }, [cornQuantity, geeseQuantity, initialGeeseQuantity, initialCornQuantity]);
+  
+  const calculateMessage = () => {
     if (cornQuantity === 0 && geeseQuantity === 0) {
       return setMessage(`No cargo to take`);
     }
@@ -35,8 +55,7 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
         `take in this order :  ${cornQuantity === 1 ? "corn" : "corns"}`
       );
     }
-  }, [cornQuantity, geeseQuantity, initialGeeseQuantity, initialCornQuantity]);
-
+  };
   const calculateCostOfTrip = () => {
     if (
       (cornQuantity > 1 && geeseQuantity > 0) ||
@@ -110,6 +129,7 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
       </fieldset>
       <label>£ {calculateCostOfTrip()}</label>
       <p className="user-info">{message}</p>
+      <p className="user-info">Trip Count: {tripCount}</p>
     </form>
   );
 };

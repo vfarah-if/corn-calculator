@@ -49,6 +49,12 @@ exports[`Trip Calculator should default with 0 goose, 0 corn : cost £0.25 : no 
     >
       No cargo to take
     </p>
+    <p
+      class="user-info"
+    >
+      Trip Count: 
+      1
+    </p>
   </form>
 </div>
 `;
@@ -101,6 +107,12 @@ exports[`Trip Calculator should get -1 goose, -1 corn : cost £0.25 : no cargo t
       class="user-info"
     >
       No cargo to take
+    </p>
+    <p
+      class="user-info"
+    >
+      Trip Count: 
+      1
     </p>
   </form>
 </div>
@@ -155,6 +167,12 @@ exports[`Trip Calculator should get 0 goose, 1 corn : cost £0.25 : take in this
     >
       take in this order :  corn
     </p>
+    <p
+      class="user-info"
+    >
+      Trip Count: 
+      1
+    </p>
   </form>
 </div>
 `;
@@ -207,6 +225,12 @@ exports[`Trip Calculator should get 0 goose, 2 corn : cost £0.50 : take in this
       class="user-info"
     >
       take in this order :  corns
+    </p>
+    <p
+      class="user-info"
+    >
+      Trip Count: 
+      2
     </p>
   </form>
 </div>
@@ -261,6 +285,12 @@ exports[`Trip Calculator should get 1 goose, 0 corn : cost £0.25 : take in this
     >
       take in this order : goose
     </p>
+    <p
+      class="user-info"
+    >
+      Trip Count: 
+      1
+    </p>
   </form>
 </div>
 `;
@@ -313,6 +343,12 @@ exports[`Trip Calculator should get 1 goose, 1 corn : cost £0.50 : take corn fi
       class="user-info"
     >
       take the corn first
+    </p>
+    <p
+      class="user-info"
+    >
+      Trip Count: 
+      2
     </p>
   </form>
 </div>
@@ -367,6 +403,12 @@ exports[`Trip Calculator should get 1 goose, 2 corn : Do not make trip, corn is 
     >
       Do not make trip, corn is at risk
     </p>
+    <p
+      class="user-info"
+    >
+      Trip Count: 
+      0
+    </p>
   </form>
 </div>
 `;
@@ -419,6 +461,12 @@ exports[`Trip Calculator should get 2 goose, 1 corn : Do not make trip, corn is 
       class="user-info"
     >
       Do not make trip, corn is at risk
+    </p>
+    <p
+      class="user-info"
+    >
+      Trip Count: 
+      0
     </p>
   </form>
 </div>

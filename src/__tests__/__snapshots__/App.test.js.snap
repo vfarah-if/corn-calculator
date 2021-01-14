@@ -63,6 +63,12 @@ exports[`App should get default app in the expected html format 1`] = `
         >
           No cargo to take
         </p>
+        <p
+          class="user-info"
+        >
+          Trip Count: 
+          1
+        </p>
       </form>
     </div>
   </div>
