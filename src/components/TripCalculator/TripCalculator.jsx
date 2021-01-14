@@ -11,9 +11,15 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
 
   useEffect(() => {
     calculateMessage();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cornQuantity, geeseQuantity, initialGeeseQuantity, initialCornQuantity]);
 
   useEffect(() => {
+    calculateTripCount();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cornQuantity, geeseQuantity, initialGeeseQuantity, initialCornQuantity]);
+
+  const calculateTripCount = () => {
     if (cornQuantity === 1 && geeseQuantity === 1) {
       return setTripCount(cornQuantity + geeseQuantity);
     }
@@ -25,9 +31,10 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
     if (cornQuantity <= 0 && geeseQuantity <= 0) {
       return setTripCount(1);
     }
+    
     return setTripCount(Math.max(cornQuantity, 0) + Math.max(geeseQuantity, 0));
-  }, [cornQuantity, geeseQuantity, initialGeeseQuantity, initialCornQuantity]);
-  
+  }
+
   const calculateMessage = () => {
     if (cornQuantity === 0 && geeseQuantity === 0) {
       return setMessage(`No cargo to take`);
@@ -56,25 +63,9 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
       );
     }
   };
+
   const calculateCostOfTrip = () => {
-    if (
-      (cornQuantity > 1 && geeseQuantity > 0) ||
-      (cornQuantity > 0 && geeseQuantity > 1)
-    ) {
-      return parseFloat(0).toFixed(2);
-    }
-
-    if (cornQuantity > 0) {
-      return parseFloat(cornQuantity * costPerTrip).toFixed(2);
-    }
-
-    if (geeseQuantity > 0) {
-      return parseFloat(geeseQuantity * costPerTrip).toFixed(2);
-    }
-
-    if (cornQuantity <= 0 && geeseQuantity <= 0) {
-      return parseFloat(costPerTrip).toFixed(2);
-    }
+    return parseFloat(tripCount * costPerTrip).toFixed(2);
   };
 
   // DRY

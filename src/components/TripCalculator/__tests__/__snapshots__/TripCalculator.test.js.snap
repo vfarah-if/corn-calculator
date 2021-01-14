@@ -337,7 +337,7 @@ exports[`Trip Calculator should get 1 goose, 1 corn : cost £0.50 : take corn fi
     </fieldset>
     <label>
       £ 
-      0.25
+      0.50
     </label>
     <p
       class="user-info"
