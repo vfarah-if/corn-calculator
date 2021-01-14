@@ -9,13 +9,18 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
   const costPerBag = 0.25;
 
   useEffect(() => {
+    if(geeseQuantity === cornQuantity && geeseQuantity >= 1) {
+      return setMessage(`take the corn first`);      
+    }
+
     if (geeseQuantity > 0) {
-      setMessage(
+      return setMessage(
         `take in this order : ${geeseQuantity === 1 ? "goose" : "geese"}`
       );
     }
+
     if (cornQuantity > 0) {
-      setMessage(
+      return setMessage(
         `take in this order :  ${cornQuantity === 1 ? "corn" : "corns"}`
       );
     }
