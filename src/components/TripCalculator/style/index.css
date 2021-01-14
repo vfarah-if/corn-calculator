@@ -1,0 +1,21 @@
+.input-group  {
+    margin-top:10px;
+    width:60%;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+  }
+  
+  .user-info {
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  form {
+    margin:0 auto;
+    padding:20px;
+  }
+  
+  label, input {
+    flex-basis:200px;
+  }
