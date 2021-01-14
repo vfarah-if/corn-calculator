@@ -5,7 +5,7 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
   // Put consts or functions or state
   const [cornQuantity, setCornQuantity] = useState(initialCornQuantity || 0);
   const [geeseQuantity, setGeeseQuantity] = useState(initialGeeseQuantity || 0);
-  const [message, setMessage] = useState("No cargo to take");
+  const [message, setMessage] = useState("no cargo to take");
   const [tripCount, setTripCount] = useState(1);
   const costPerTrip = 0.25;
 
@@ -37,7 +37,7 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
 
   const calculateMessage = () => {
     if (cornQuantity === 0 && geeseQuantity === 0) {
-      return setMessage(`No cargo to take`);
+      return setMessage(`no cargo to take`);
     }
 
     if (

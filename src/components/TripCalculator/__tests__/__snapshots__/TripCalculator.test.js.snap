@@ -47,7 +47,7 @@ exports[`Trip Calculator should default with 0 goose, 0 corn : cost £0.25 : no 
     <p
       class="user-info"
     >
-      No cargo to take
+      no cargo to take
     </p>
     <p
       class="user-info"
@@ -106,7 +106,7 @@ exports[`Trip Calculator should get -1 goose, -1 corn : cost £0.25 : no cargo t
     <p
       class="user-info"
     >
-      No cargo to take
+      no cargo to take
     </p>
     <p
       class="user-info"

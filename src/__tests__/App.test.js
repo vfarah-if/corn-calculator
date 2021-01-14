@@ -41,10 +41,10 @@ describe('App', () => {
     expect(linkElement).toBeInTheDocument();
   });
 
-  test(`should default user message to "No cargo to take"`, () => {
+  test(`should default user message to "no cargo to take"`, () => {
     render(<App />);
     
-    const linkElement = screen.getByText(/No cargo to take/i);
+    const linkElement = screen.getByText(/no cargo to take/i);
     
     expect(linkElement).toBeInTheDocument();
   });

@@ -61,7 +61,7 @@ exports[`App should get default app in the expected html format 1`] = `
         <p
           class="user-info"
         >
-          No cargo to take
+          no cargo to take
         </p>
         <p
           class="user-info"
