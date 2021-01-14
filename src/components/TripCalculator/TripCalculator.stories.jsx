@@ -8,8 +8,20 @@ export default {
     component: TripCalculator
 };
 
-export const TripCalculatorExample = () => (
+const TripCalculatorTemplate = (args) => (
     <Fragment>
-        <TripCalculator />
+        <TripCalculator {...args}/>
     </Fragment>
 );
+
+export const Default = TripCalculatorTemplate.bind({});
+Default.args = {
+    initialCornQuantity: 0, 
+    initialGeeseQuantity: 0
+};
+
+export const OneGooseAndZeroCorn = TripCalculatorTemplate.bind({});
+OneGooseAndZeroCorn.args = {
+    initialCornQuantity: 0, 
+    initialGeeseQuantity: 1
+};

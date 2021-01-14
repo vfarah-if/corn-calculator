@@ -1,18 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./style/index.css";
 
-const TripCalculator = (props) => {
+const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
   // Put consts or functions or state
-  const [cornQuantity, setCornQuantity] = useState(0);
-  const [geeseQuantity, setGeeseQuantity] = useState(0);
+  const [cornQuantity, setCornQuantity] = useState(initialCornQuantity || 0);
+  const [geeseQuantity, setGeeseQuantity] = useState(initialGeeseQuantity || 0);
   const [message, setMessage] = useState("No cargo to take");
   const costPerBag = 0.25;
 
-  const calculateCostOfTrip = () => {    
+  useEffect(() => {
+    if (geeseQuantity > 0) {
+      setMessage("take in this order : goose");
+    }
+  }, [cornQuantity, geeseQuantity, initialGeeseQuantity, initialCornQuantity]);
+
+  const calculateCostOfTrip = () => {
     if (cornQuantity > 0) {
       return parseFloat(cornQuantity * costPerBag).toFixed(2);
     }
-    
+
     if (geeseQuantity > 0) {
       return parseFloat(geeseQuantity * costPerBag).toFixed(2);
     }
@@ -20,8 +26,8 @@ const TripCalculator = (props) => {
     if (cornQuantity <= 0 && geeseQuantity <= 0) {
       return parseFloat(costPerBag).toFixed(2);
     }
-  }
-  
+  };
+
   // DRY
   const cornQuantityHandler = (e) => {
     const value = Number.parseInt(e.target.value, 10) || 0;
