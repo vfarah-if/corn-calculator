@@ -49,10 +49,6 @@ describe('App', () => {
     expect(linkElement).toBeInTheDocument();
   });
 
-  // TODO: Test where cornQuality is upped by 1 (removed for StoryBooking)
-  // TODO: Test where geeseQuantity is upped by 1 (removed for StoryBooking)
-  // TODO: Update tests covered (removed for StoryBooking)
-
   test('should get default app in the expected html format', () => {
     const component = render(<App />);
           
