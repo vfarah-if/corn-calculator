@@ -9,6 +9,7 @@ import {
   OneCornAndOneGoose,
   OneGooseAndTwoCorns,
   TwoGooseAndOneCorns,
+  NegativeGooseAndCorns,
 } from "../TripCalculator.stories";
 
 describe("Trip Calculator", () => {
@@ -65,5 +66,13 @@ describe("Trip Calculator", () => {
     );
 
     expect(container).toMatchSnapshot("2 goose and 1 corns");
+  });
+
+  test("should get -1 goose, -1 corn : cost £0.25 : no cargo to take", () => {
+    const { container } = render(
+      <NegativeGooseAndCorns {...NegativeGooseAndCorns.args} />
+    );
+
+    expect(container).toMatchSnapshot("negative goose and corns");
   });
 });

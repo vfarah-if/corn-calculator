@@ -31,6 +31,7 @@ exports[`App should get default app in the expected html format 1`] = `
             </label>
             <input
               id="cornQuantity"
+              min="0"
               name="quantity"
               type="number"
               value="0"
@@ -46,6 +47,7 @@ exports[`App should get default app in the expected html format 1`] = `
             </label>
             <input
               id="geeseQuantity"
+              min="0"
               name="quantity"
               type="number"
               value="0"

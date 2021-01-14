@@ -9,6 +9,11 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
   const costPerBag = 0.25;
 
   useEffect(() => {
+
+    if (cornQuantity === 0 && geeseQuantity === 0) {
+      return setMessage(`No cargo to take`);
+    }
+
     if (cornQuantity > 1 && geeseQuantity > 0) {
       return setMessage(`Do not make trip, corn is at risk`);
     }
@@ -58,15 +63,21 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
 
   // DRY
   const cornQuantityHandler = (e) => {
-    const value = Number.parseInt(e.target.value, 10) || 0;
+    let value = Number.parseInt(e.target.value, 10) || 0;
     console.log("Quantity of corn", value);
+    if(value < 0) {
+      value = 0;
+    }
     setCornQuantity(value);
   };
 
   // DRY
   const geeseQuantityHandler = (e) => {
-    const value = Number.parseInt(e.target.value, 10) || 0;
+    let value = Number.parseInt(e.target.value, 10) || 0;
     console.log("Quantity of geese", value);
+    if(value < 0) {
+      value = 0;
+    }
     setGeeseQuantity(value);
   };
 
@@ -84,6 +95,7 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
             name="quantity"
             value={cornQuantity}
             onChange={cornQuantityHandler}
+            min={0}
           />
         </div>
         <div className="input-group">
@@ -95,6 +107,7 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
             name="quantity"
             value={geeseQuantity}
             onChange={geeseQuantityHandler}
+            min={0}
           />
         </div>
       </fieldset>

@@ -60,3 +60,9 @@ TwoGooseAndOneCorns.args = {
   initialCornQuantity: 1,
   initialGeeseQuantity: 2,
 };
+
+export const NegativeGooseAndCorns = TripCalculatorTemplate.bind({});
+NegativeGooseAndCorns.args = {
+  initialCornQuantity: -1,
+  initialGeeseQuantity: -1,
+};
