@@ -305,3 +305,54 @@ exports[`Trip Calculator should get 1 goose, 2 corn : Do not make trip, corn is 
   </form>
 </div>
 `;
+
+exports[`Trip Calculator should get 2 goose, 1 corn : Do not make trip, corn is at risk: 2 goose and 1 corns 1`] = `
+<div>
+  <form>
+    <legend>
+      Plan your trip
+    </legend>
+    <fieldset>
+      <div
+        class="input-group"
+      >
+        <label
+          forhtml="cornQuantity"
+        >
+          Corn Quantity:
+        </label>
+        <input
+          id="cornQuantity"
+          name="quantity"
+          type="number"
+          value="1"
+        />
+      </div>
+      <div
+        class="input-group"
+      >
+        <label
+          forhtml="geeseQuantity"
+        >
+          Geese Quantity:
+        </label>
+        <input
+          id="geeseQuantity"
+          name="quantity"
+          type="number"
+          value="2"
+        />
+      </div>
+    </fieldset>
+    <label>
+      £ 
+      0.00
+    </label>
+    <p
+      class="user-info"
+    >
+      Do not make trip, corn is at risk
+    </p>
+  </form>
+</div>
+`;

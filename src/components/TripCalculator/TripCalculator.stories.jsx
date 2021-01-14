@@ -54,3 +54,9 @@ OneGooseAndTwoCorns.args = {
   initialCornQuantity: 2,
   initialGeeseQuantity: 1,
 };
+
+export const TwoGooseAndOneCorns = TripCalculatorTemplate.bind({});
+TwoGooseAndOneCorns.args = {
+  initialCornQuantity: 1,
+  initialGeeseQuantity: 2,
+};
