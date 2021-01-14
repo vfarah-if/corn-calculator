@@ -9,12 +9,16 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
   const costPerBag = 0.25;
 
   useEffect(() => {
-    if (geeseQuantity > 0) {        
-      setMessage(`take in this order : ${geeseQuantity === 1 ? 'goose' : 'geese'}`);
+    if (geeseQuantity > 0) {
+      setMessage(
+        `take in this order : ${geeseQuantity === 1 ? "goose" : "geese"}`
+      );
     }
     if (cornQuantity > 0) {
-        setMessage(`take in this order :  ${cornQuantity === 1 ? 'corn' : 'corns'}`);
-      }
+      setMessage(
+        `take in this order :  ${cornQuantity === 1 ? "corn" : "corns"}`
+      );
+    }
   }, [cornQuantity, geeseQuantity, initialGeeseQuantity, initialCornQuantity]);
 
   const calculateCostOfTrip = () => {
