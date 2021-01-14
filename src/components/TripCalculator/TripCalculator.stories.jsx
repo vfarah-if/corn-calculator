@@ -13,8 +13,8 @@ const TripCalculatorTemplate = (args) => (
   </Fragment>
 );
 
-export const Default = TripCalculatorTemplate.bind({});
-Default.args = {
+export const DefaultZeros = TripCalculatorTemplate.bind({});
+DefaultZeros.args = {
   initialCornQuantity: 0,
   initialGeeseQuantity: 0,
 };

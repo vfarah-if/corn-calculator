@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Trip Calculator should default with 0 goose, 0 corn : cost £0.25 : no cargo to take: default zeros 1`] = `
+<div>
+  <form>
+    <legend>
+      Plan your trip
+    </legend>
+    <fieldset>
+      <div
+        class="input-group"
+      >
+        <label
+          forhtml="cornQuantity"
+        >
+          Corn Quantity:
+        </label>
+        <input
+          id="cornQuantity"
+          name="quantity"
+          type="number"
+          value="0"
+        />
+      </div>
+      <div
+        class="input-group"
+      >
+        <label
+          forhtml="geeseQuantity"
+        >
+          Geese Quantity:
+        </label>
+        <input
+          id="geeseQuantity"
+          name="quantity"
+          type="number"
+          value="0"
+        />
+      </div>
+    </fieldset>
+    <label>
+      £ 
+      0.25
+    </label>
+    <p
+      class="user-info"
+    >
+      No cargo to take
+    </p>
+  </form>
+</div>
+`;
