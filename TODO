@@ -3,8 +3,8 @@
 ✔ Created base tests @done(21-01-13 16:54)
 ✔ Deployed to Git @done(21-01-13 16:54)
 ✔ Deployed to Azure @done(21-01-13 16:54)
-☐ Add Storybook to the process to show how easy it is to deveop and test UI components and to setup with Clients
-☐ Delete the generated storybooks, just keep to demonstrate what can be achieved
+✔ Add Storybook to the process to show how easy it is to deveop and test UI components and to setup with Clients @done(21-01-14 08:56)
+    ☐ Delete the generated storybooks, just keep to demonstrate what can be achieved
 ☐ New client changes that need to be developed        
     ✔ Refactor existing code to work as corn and simplify the existing tests @done(21-01-13 20:32)    
     ✔ 0 goose, 0 corn : cost £0.25 : no cargo to take @done(21-01-14 08:33)
