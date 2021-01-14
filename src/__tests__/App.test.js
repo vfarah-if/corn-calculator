@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 
-import App from './App';
+import App from '../App';
 
 describe('App', () => {
   test('should contain a header with river trip adviser', () => {
