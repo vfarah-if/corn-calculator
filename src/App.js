@@ -56,6 +56,7 @@ function App() {
           {/* TODO: Extract Trip Calculator Component */}
           <fieldset>
             <div className="input-group">
+              {/* TODO: Extract Quantity Input Component */}
               <label forhtml="cornQuantity">Corn Quantity:</label>
               <input
                 type="number"
@@ -66,6 +67,7 @@ function App() {
               />
             </div>
             <div className="input-group">
+              {/* TODO: Extract Quantity Input Component */}
               <label forhtml="geeseQuantity">Geese Quantity:</label>
               <input
                 type="number"
