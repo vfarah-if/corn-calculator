@@ -7,6 +7,7 @@ import {
   OneCornAndZeroGoose,
   TwoCornAndZeroGoose,
   OneCornAndOneGoose,
+  OneGooseAndTwoCorns,
 } from "../TripCalculator.stories";
 
 describe("Trip Calculator", () => {
@@ -46,5 +47,14 @@ describe("Trip Calculator", () => {
     );
 
     expect(container).toMatchSnapshot("one of each");
+  });
+
+
+  test("should get 1 goose, 2 corn : Do not make trip, corn is at risk", () => {
+    const { container } = render(
+      <OneGooseAndTwoCorns {...OneGooseAndTwoCorns.args} />
+    );
+
+    expect(container).toMatchSnapshot("one goose and 2 corns");
   });
 });

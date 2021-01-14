@@ -9,6 +9,11 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
   const costPerBag = 0.25;
 
   useEffect(() => {
+
+    if(cornQuantity > 1 && geeseQuantity > 0) {
+      return setMessage(`Do not make trip, corn is at risk`);      
+    }
+
     if(geeseQuantity === cornQuantity && geeseQuantity >= 1) {
       return setMessage(`take the corn first`);      
     }
@@ -27,6 +32,10 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
   }, [cornQuantity, geeseQuantity, initialGeeseQuantity, initialCornQuantity]);
 
   const calculateCostOfTrip = () => {
+    if(cornQuantity > 1 && geeseQuantity > 0) {
+      return parseFloat(0).toFixed(2)    
+    }
+
     if (cornQuantity > 0) {
       return parseFloat(cornQuantity * costPerBag).toFixed(2);
     }
