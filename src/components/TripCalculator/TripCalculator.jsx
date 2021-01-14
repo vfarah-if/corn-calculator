@@ -12,6 +12,9 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
     if (geeseQuantity > 0) {
       setMessage("take in this order : goose");
     }
+    if (cornQuantity > 0) {
+        setMessage("take in this order : corn");
+      }
   }, [cornQuantity, geeseQuantity, initialGeeseQuantity, initialCornQuantity]);
 
   const calculateCostOfTrip = () => {

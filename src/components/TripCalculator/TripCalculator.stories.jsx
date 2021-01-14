@@ -25,3 +25,10 @@ OneGooseAndZeroCorn.args = {
     initialCornQuantity: 0, 
     initialGeeseQuantity: 1
 };
+
+
+export const OneCornAndZeroGoose = TripCalculatorTemplate.bind({});
+OneCornAndZeroGoose.args = {
+    initialCornQuantity: 1, 
+    initialGeeseQuantity: 0
+};
