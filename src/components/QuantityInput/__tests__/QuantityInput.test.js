@@ -21,12 +21,27 @@ describe("QuantityInput", () => {
     expect(container).toMatchSnapshot("quantity of one");
   });
 
-  test("should set negative quantity to zero", () => {
+  test("should set negative initial quantity to zero", () => {
     const { container } = render(
       <QuantityOfNegativeWillBeZero {...Default.args} />
     );
 
     expect(container).toMatchSnapshot("negative quantity");
+  });
+
+  test("should never allow clipboard injection of a negative value", async () => {
+    const expectedNumber = 0;
+    const handleChange = jest.fn();
+    const { container } = render(
+      <QuantityInput label="Test" initialQuantity={0} onQuantityChange={handleChange} />
+    );
+
+    const inputElement = container.querySelector('input');
+    fireEvent.change(inputElement, { target: { value: -1 } });
+
+    expect(inputElement.value).toBe(expectedNumber.toString());
+    expect(handleChange).toHaveBeenCalledWith(expectedNumber);
+    expect(handleChange).toBeCalledTimes(1);
   });
 
   test("should assign a value to the onQuantityChange", async () => {

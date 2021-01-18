@@ -34,7 +34,7 @@ exports[`QuantityInput should have a quantity of 1 when set or changed: quantity
 </div>
 `;
 
-exports[`QuantityInput should set negative quantity to zero: negative quantity 1`] = `
+exports[`QuantityInput should set negative initial quantity to zero: negative quantity 1`] = `
 <div>
   <label
     forhtml="quantity"
