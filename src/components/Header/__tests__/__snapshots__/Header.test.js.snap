@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should create a header with custom image url: default 1`] = `
+<div>
+  <header
+    class="header"
+    style="background-image: url(https://images.pexels.com/photos/34153/pexels-photo.jpg?auto=compress&cs=tinysrgb&h=350); background-position: center; background-size: cover; background-repeat: no-repeat;"
+  >
+    <h1>
+      Title to add to the top of a component
+    </h1>
+  </header>
+</div>
+`;
