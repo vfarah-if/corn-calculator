@@ -6,6 +6,24 @@ The project was not done as Typescript for the reason that the onboarding team h
 
 A demo of working application can be found at [https://vfarah-if.github.io/corn-calculator/](https://vfarah-if.github.io/corn-calculator/).
 
+# Problem to solve
+
+"A man went on a trip with a fox, a goose and a sack of corn. He came upon a stream which he had to cross and found a tiny boat to use to cross the stream. He could only take himself and one other - **the fox, the goose, or the corn - one at a time**. He could not leave the fox alone with the goose or the goose alone with the corn. How does he get all safely over the stream?"
+
+The above riddle is probably the origin of what we did, however our context was altered to make it more interesting and to prevent people googling the answer. Our scenario was that this is an app needed by a talking fox, no lies it was like speaking to a fox from Beatrix Potter series, who was the customer, wanting to undergo a journey to sell his corn at a market. The fox wanted a mobile app to:
+
+1. Inform the cost of going to the market
+2. Incurred a cost no matter if something or nothing was taken across the river
+3. Base cost of any item is 25P
+4. Could only cross with 1 thing at a time
+5. The items for sale was geese or corn
+6. The corn would be at risk if the the geese were left alone with the corn
+7. So information like the amount of trips permissible and the cost as well as if it was possible and some kind if informative message based on the very specific scenarios
+
+# Environment
+
+The application is generated from create react app using the `npx create-react-app` command.
+
 ## Custom Script Commands
 
 ### `yarn deploy`
