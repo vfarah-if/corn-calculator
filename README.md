@@ -1,10 +1,26 @@
-# Getting Started with Create React App
+# Introduction
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an enboarding project designed as a way of working with team to teach basics of solving a problem, introducing React to the team as well as other ways solving communication.
 
-Authenticated client **URL** for the client can be found at [https://corncalculator.azurewebsites.net](https://meet.google.com/linkredirect?authuser=0&dest=https%3A%2F%2Fcorncalculator.azurewebsites.net%2F) using the email to with **email** farmermoon@fbquinterosgmail.onmicrosoft.com  **password** *Ruku4533*
+The project was not done as Typescript for the reason that the onboarding team had mixed skills, non-technical to developers who had never touched React. This project was a simple way of introducing developers to create react app, Jest testing, tdd through JS, extended to storybooking which was a next UI way of TDDing and visualising UI coding. This is work in progress and can be continued
 
-## Available Scripts
+A demo of working application can be found at [https://vfarah-if.github.io/corn-calculator/](https://vfarah-if.github.io/corn-calculator/).
+
+## Custom Script Commands
+
+### `yarn deploy`
+
+Deploy build to git for a demo of the working application. This has been created because the initial deployment needed to host the demo on a mobile app required some kind of deployment, and so git seemed a likely candidate. Remember to `yarn build` the application before doing a *deploy*.
+
+### `yarn coverage`
+
+Runs `yarn test` just once and outputs code coverage reports to a coverage folder. All defaults set, this is a very good way of understanding what has been testsed and what has been excluded.
+
+### `yarn storybook`
+
+Generates a storybook web application to begin developing storybook scenarios, which is a great way of creating style guides and visual ways of initially creating UI scenarios. In this current example the storybook scenarios where used to extended to tests and a snapshot way of testing UI behaviour. 
+
+## Available Scripts for React Application
 
 In the project directory, you can run:
 
