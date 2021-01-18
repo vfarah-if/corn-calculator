@@ -11,12 +11,12 @@ exports[`Trip Calculator should default with 0 goose, 0 corn : cost £0.25 : no 
         class="input-group"
       >
         <label
-          forhtml="cornQuantity"
+          forhtml="quantity"
         >
-          Corn Quantity:
+          Corn Quantity
+          :
         </label>
         <input
-          id="cornQuantity"
           min="0"
           name="quantity"
           type="number"
@@ -27,12 +27,12 @@ exports[`Trip Calculator should default with 0 goose, 0 corn : cost £0.25 : no 
         class="input-group"
       >
         <label
-          forhtml="geeseQuantity"
+          forhtml="quantity"
         >
-          Geese Quantity:
+          Geese Quantity
+          :
         </label>
         <input
-          id="geeseQuantity"
           min="0"
           name="quantity"
           type="number"
@@ -70,32 +70,32 @@ exports[`Trip Calculator should get -1 goose, -1 corn : cost £0.25 : no cargo t
         class="input-group"
       >
         <label
-          forhtml="cornQuantity"
+          forhtml="quantity"
         >
-          Corn Quantity:
+          Corn Quantity
+          :
         </label>
         <input
-          id="cornQuantity"
           min="0"
           name="quantity"
           type="number"
-          value="-1"
+          value="0"
         />
       </div>
       <div
         class="input-group"
       >
         <label
-          forhtml="geeseQuantity"
+          forhtml="quantity"
         >
-          Geese Quantity:
+          Geese Quantity
+          :
         </label>
         <input
-          id="geeseQuantity"
           min="0"
           name="quantity"
           type="number"
-          value="-1"
+          value="0"
         />
       </div>
     </fieldset>
@@ -129,12 +129,12 @@ exports[`Trip Calculator should get 0 goose, 1 corn : cost £0.25 : take in this
         class="input-group"
       >
         <label
-          forhtml="cornQuantity"
+          forhtml="quantity"
         >
-          Corn Quantity:
+          Corn Quantity
+          :
         </label>
         <input
-          id="cornQuantity"
           min="0"
           name="quantity"
           type="number"
@@ -145,12 +145,12 @@ exports[`Trip Calculator should get 0 goose, 1 corn : cost £0.25 : take in this
         class="input-group"
       >
         <label
-          forhtml="geeseQuantity"
+          forhtml="quantity"
         >
-          Geese Quantity:
+          Geese Quantity
+          :
         </label>
         <input
-          id="geeseQuantity"
           min="0"
           name="quantity"
           type="number"
@@ -188,12 +188,12 @@ exports[`Trip Calculator should get 0 goose, 2 corn : cost £0.50 : take in this
         class="input-group"
       >
         <label
-          forhtml="cornQuantity"
+          forhtml="quantity"
         >
-          Corn Quantity:
+          Corn Quantity
+          :
         </label>
         <input
-          id="cornQuantity"
           min="0"
           name="quantity"
           type="number"
@@ -204,12 +204,12 @@ exports[`Trip Calculator should get 0 goose, 2 corn : cost £0.50 : take in this
         class="input-group"
       >
         <label
-          forhtml="geeseQuantity"
+          forhtml="quantity"
         >
-          Geese Quantity:
+          Geese Quantity
+          :
         </label>
         <input
-          id="geeseQuantity"
           min="0"
           name="quantity"
           type="number"
@@ -247,12 +247,12 @@ exports[`Trip Calculator should get 1 goose, 0 corn : cost £0.25 : take in this
         class="input-group"
       >
         <label
-          forhtml="cornQuantity"
+          forhtml="quantity"
         >
-          Corn Quantity:
+          Corn Quantity
+          :
         </label>
         <input
-          id="cornQuantity"
           min="0"
           name="quantity"
           type="number"
@@ -263,12 +263,12 @@ exports[`Trip Calculator should get 1 goose, 0 corn : cost £0.25 : take in this
         class="input-group"
       >
         <label
-          forhtml="geeseQuantity"
+          forhtml="quantity"
         >
-          Geese Quantity:
+          Geese Quantity
+          :
         </label>
         <input
-          id="geeseQuantity"
           min="0"
           name="quantity"
           type="number"
@@ -306,12 +306,12 @@ exports[`Trip Calculator should get 1 goose, 1 corn : cost £0.50 : take corn fi
         class="input-group"
       >
         <label
-          forhtml="cornQuantity"
+          forhtml="quantity"
         >
-          Corn Quantity:
+          Corn Quantity
+          :
         </label>
         <input
-          id="cornQuantity"
           min="0"
           name="quantity"
           type="number"
@@ -322,12 +322,12 @@ exports[`Trip Calculator should get 1 goose, 1 corn : cost £0.50 : take corn fi
         class="input-group"
       >
         <label
-          forhtml="geeseQuantity"
+          forhtml="quantity"
         >
-          Geese Quantity:
+          Geese Quantity
+          :
         </label>
         <input
-          id="geeseQuantity"
           min="0"
           name="quantity"
           type="number"
@@ -365,12 +365,12 @@ exports[`Trip Calculator should get 1 goose, 2 corn : Do not make trip, corn is 
         class="input-group"
       >
         <label
-          forhtml="cornQuantity"
+          forhtml="quantity"
         >
-          Corn Quantity:
+          Corn Quantity
+          :
         </label>
         <input
-          id="cornQuantity"
           min="0"
           name="quantity"
           type="number"
@@ -381,12 +381,12 @@ exports[`Trip Calculator should get 1 goose, 2 corn : Do not make trip, corn is 
         class="input-group"
       >
         <label
-          forhtml="geeseQuantity"
+          forhtml="quantity"
         >
-          Geese Quantity:
+          Geese Quantity
+          :
         </label>
         <input
-          id="geeseQuantity"
           min="0"
           name="quantity"
           type="number"
@@ -424,12 +424,12 @@ exports[`Trip Calculator should get 2 goose, 1 corn : Do not make trip, corn is 
         class="input-group"
       >
         <label
-          forhtml="cornQuantity"
+          forhtml="quantity"
         >
-          Corn Quantity:
+          Corn Quantity
+          :
         </label>
         <input
-          id="cornQuantity"
           min="0"
           name="quantity"
           type="number"
@@ -440,12 +440,12 @@ exports[`Trip Calculator should get 2 goose, 1 corn : Do not make trip, corn is 
         class="input-group"
       >
         <label
-          forhtml="geeseQuantity"
+          forhtml="quantity"
         >
-          Geese Quantity:
+          Geese Quantity
+          :
         </label>
         <input
-          id="geeseQuantity"
           min="0"
           name="quantity"
           type="number"

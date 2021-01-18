@@ -4,7 +4,7 @@
 ✔ Deployed to Git @done(21-01-13 16:54)
 ✔ Deployed to Azure @done(21-01-13 16:54)
 ✔ Add Storybook to the process to show how easy it is to deveop and test UI components and to setup with Clients @done(21-01-14 08:56)
-    ☐ Delete the generated storybooks, just keep to demonstrate what can be achieved
+    ✔ Delete the generated storybooks, just keep to demonstrate what can be achieved @done(21-01-18 17:02)
 ☐ New client changes that need to be developed        
     ✔ Refactor existing code to work as corn and simplify the existing tests @done(21-01-13 20:32)    
     ✔ 0 goose, 0 corn : cost £0.25 : no cargo to take @done(21-01-14 08:33)
@@ -16,11 +16,14 @@
     ✔ 1 goose, 2 corn : Do not make trip, corn is at risk @done(21-01-14 13:46)
     ✔ 2 goose, 1 corn : Do not make trip, corn is at risk @done(21-01-14 13:54)
     ☐ -1 goose, -1 corn : cost £0.25 : no cargo to take @done(21-01-14 08:33)
-    ☐ if you have both items and more than one of either then don't make the trip
+    ✔ if you have both items and more than one of either then don't make the trip @done(21-01-18 17:02)
     ☐ They will probably add another layer after this which puts geese at risk if I'm guessing where this is going. 
-    ☐ Prevent values below zero from being entered @low 
+        ☐ Maybe add the fox logic to all of this to enhance it the original way @low 
+    ✔ Prevent values below zero from being entered @low @done(21-01-18 17:01)
 ☐ Nice to haves if there is time
-    ☐ Use the https://material-ui.com/getting-started/installation/ to update components and theme
-    ☐ Extract components into components folder moving logic out of the App infrastructure
+    ☐ Use the https://material-ui.com/getting-started/installation/ to update components and theme @low
+    ✔ Extract components into components folder moving logic out of the App infrastructure @done(21-01-18 17:00)
     ☐ Break components up within components to extract and simplify logic
-    ☐ Style the application better so it looks and feels more presentable/professional
+        ✔ Extract QuantityInput @done(21-01-18 17:00)
+        ☐ Extract Header Component
+    ✔ Style the application better so it looks and feels more presentable/professional (kinda) @done(21-01-18 17:02)

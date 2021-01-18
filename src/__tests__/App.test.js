@@ -15,10 +15,19 @@ describe('App', () => {
     expect(linkElement).toBeInTheDocument();
   });
 
+  test('should contain two quantity inputs', () => {
+    const component = render(<App />);
+    
+    const inputElements = component.container.querySelectorAll('input[name="quantity"]');
+
+    expect(inputElements.length).toBe(2);
+  });
+
   test('should contain corn quantity with initial default value of 0', () => {
     const component = render(<App />);
     
-    const inputElement = component.container.querySelector('#cornQuantity');
+    const inputElements = component.container.querySelectorAll('input[name="quantity"]');
+    const inputElement = inputElements[0];
 
     expect(inputElement).toBeTruthy();
     expect(inputElement.value).toBe("0");
@@ -27,7 +36,8 @@ describe('App', () => {
   test('should contain geese quantity with initial default value of 0', () => {
     const component = render(<App />);
     
-    const inputElement = component.container.querySelector('#geeseQuantity');
+    const inputElements = component.container.querySelectorAll('input[name="quantity"]');
+    const inputElement = inputElements[1];
 
     expect(inputElement).toBeTruthy();
     expect(inputElement.value).toBe("0");

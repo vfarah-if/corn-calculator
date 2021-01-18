@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`QuantityInput should create a default label and input component defaulting quantity to zero: default 1`] = `
+<div>
+  <label
+    forhtml="quantity"
+  >
+    Corn Quantity
+    :
+  </label>
+  <input
+    min="0"
+    name="quantity"
+    type="number"
+    value="0"
+  />
+</div>
+`;
+
+exports[`QuantityInput should have a quantity of 1 when set or changed: quantity of one 1`] = `
+<div>
+  <label
+    forhtml="quantity"
+  >
+    Corn Quantity
+    :
+  </label>
+  <input
+    min="0"
+    name="quantity"
+    type="number"
+    value="0"
+  />
+</div>
+`;
+
+exports[`QuantityInput should set negative quantity to zero: negative quantity 1`] = `
+<div>
+  <label
+    forhtml="quantity"
+  >
+    Corn Quantity
+    :
+  </label>
+  <input
+    min="0"
+    name="quantity"
+    type="number"
+    value="0"
+  />
+</div>
+`;

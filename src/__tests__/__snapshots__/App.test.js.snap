@@ -25,12 +25,12 @@ exports[`App should get default app in the expected html format 1`] = `
             class="input-group"
           >
             <label
-              forhtml="cornQuantity"
+              forhtml="quantity"
             >
-              Corn Quantity:
+              Corn Quantity
+              :
             </label>
             <input
-              id="cornQuantity"
               min="0"
               name="quantity"
               type="number"
@@ -41,12 +41,12 @@ exports[`App should get default app in the expected html format 1`] = `
             class="input-group"
           >
             <label
-              forhtml="geeseQuantity"
+              forhtml="quantity"
             >
-              Geese Quantity:
+              Geese Quantity
+              :
             </label>
             <input
-              id="geeseQuantity"
               min="0"
               name="quantity"
               type="number"

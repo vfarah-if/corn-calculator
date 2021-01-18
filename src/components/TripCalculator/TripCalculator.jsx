@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+
+import QuantityInput from "../QuantityInput";
 import "./style/index.css";
 
 const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
@@ -11,12 +13,12 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
 
   useEffect(() => {
     calculateMessage();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cornQuantity, geeseQuantity, initialGeeseQuantity, initialCornQuantity]);
 
   useEffect(() => {
     calculateTripCount();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cornQuantity, geeseQuantity, initialGeeseQuantity, initialCornQuantity]);
 
   const calculateTripCount = () => {
@@ -31,9 +33,9 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
     if (cornQuantity <= 0 && geeseQuantity <= 0) {
       return setTripCount(1);
     }
-    
+
     return setTripCount(Math.max(cornQuantity, 0) + Math.max(geeseQuantity, 0));
-  }
+  };
 
   const calculateMessage = () => {
     if (cornQuantity === 0 && geeseQuantity === 0) {
@@ -68,54 +70,32 @@ const TripCalculator = ({ initialCornQuantity, initialGeeseQuantity }) => {
     return parseFloat(tripCount * costPerTrip).toFixed(2);
   };
 
-  // DRY
-  const cornQuantityHandler = (e) => {
-    let value = Number.parseInt(e.target.value, 10) || 0;
-    console.log("Quantity of corn", value);
-    if (value < 0) {
-      value = 0;
-    }
+  const cornQuantityHandler = (value) => {
     setCornQuantity(value);
   };
 
-  // DRY
-  const geeseQuantityHandler = (e) => {
-    let value = Number.parseInt(e.target.value, 10) || 0;
-    console.log("Quantity of geese", value);
-    if (value < 0) {
-      value = 0;
-    }
+  const geeseQuantityHandler = (value) => {
     setGeeseQuantity(value);
   };
 
   return (
     <form>
       <legend>Plan your trip</legend>
-      {/* TODO: Extract Trip Calculator Component */}
       <fieldset>
         <div className="input-group">
-          {/* TODO: Extract Quantity Input Component */}
-          <label forhtml="cornQuantity">Corn Quantity:</label>
-          <input
-            type="number"
-            id="cornQuantity"
-            name="quantity"
-            value={cornQuantity}
-            onChange={cornQuantityHandler}
-            min={0}
-          />
+          <QuantityInput
+            label="Corn Quantity"
+            initialQuantity={cornQuantity}
+            onQuantityChange={cornQuantityHandler}
+          ></QuantityInput>
         </div>
         <div className="input-group">
-          {/* TODO: Extract Quantity Input Component */}
-          <label forhtml="geeseQuantity">Geese Quantity:</label>
-          <input
-            type="number"
-            id="geeseQuantity"
-            name="quantity"
-            value={geeseQuantity}
-            onChange={geeseQuantityHandler}
-            min={0}
-          />
+          <QuantityInput
+            label="Geese Quantity"
+            initialQuantity={geeseQuantity}
+            onQuantityChange={geeseQuantityHandler}
+            
+          ></QuantityInput>
         </div>
       </fieldset>
       <label>£ {calculateCostOfTrip()}</label>
