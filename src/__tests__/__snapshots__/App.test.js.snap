@@ -6,7 +6,7 @@ exports[`App should get default app in the expected html format 1`] = `
     class="App"
   >
     <header
-      class="App-header"
+      class="header"
       style="background-image: url(/farm.jpg); background-position: center; background-size: cover; background-repeat: no-repeat;"
     >
       <h1>

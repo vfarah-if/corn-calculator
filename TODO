@@ -23,7 +23,7 @@
 ☐ Nice to haves if there is time
     ☐ Use the https://material-ui.com/getting-started/installation/ to update components and theme @low
     ✔ Extract components into components folder moving logic out of the App infrastructure @done(21-01-18 17:00)
-    ☐ Break components up within components to extract and simplify logic
+    ✔ Break components up within components to extract and simplify logic @done(21-01-18 23:22)
         ✔ Extract QuantityInput @done(21-01-18 17:00)
-        ☐ Extract Header Component
+        ✔ Extract Header Component @done(21-01-18 23:22)
     ✔ Style the application better so it looks and feels more presentable/professional (kinda) @done(21-01-18 17:02)
