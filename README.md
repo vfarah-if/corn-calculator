@@ -1,6 +1,6 @@
 # Introduction
 
-This is an enboarding project designed as a way of working with team to teach basics of solving a problem, introducing React to the team as well as other ways solving communication.
+This is an onboarding project designed as a way of working with team to teach basics of solving a problem, introducing React to the team as well as other ways solving communication.
 
 The project was not done as Typescript for the reason that the onboarding team had mixed skills, non-technical to developers who had never touched React. This project was a simple way of introducing developers to create react app, Jest testing, tdd through JS, extended to storybooking which was a next UI way of TDDing and visualising UI coding. This is work in progress and can be continued
 
